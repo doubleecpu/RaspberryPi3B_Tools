@@ -15,16 +15,17 @@ UPDATE_COMPLETE= false
  sudo chmod -R 770 /var/www/html/
  echo "Testing Apache on Raspberry Pi -----------------------"
  wget -O check_apache.html http://127.0.0.1 
+ echo "Installing MariaDb -----------------------"
+ sudo apt-get install mysql-server -y
  echo "Installing PHP -----------------------"
- sudo apt install php php-mbstring -y
+ sudo apt install php php-mbstring php-mysql php-cli php-gd libapache2-mod-php php-cgi -y
  cd /var/www/html
  sudo rm index.html
  sudo touch index.php
  echo "Please Add Test Message To index.php -----------------------"
  echo "echo “<?php phpinfo ();?>” > /var/www/html/index.php"
  sudo nano index.php
- echo "Installing MariaDb -----------------------"
- sudo apt-get install mysql-server php-mysql -y
+ 
  echo "Restaring apache service -----------------------"
  sudo service apache2 restart
  echo "Installing PHP Admin Please Configure Database -------------" 
