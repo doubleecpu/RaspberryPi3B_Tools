@@ -14,8 +14,9 @@ echo "Installing PHP -----------------------"
 sudo apt install php php-mbstring php-cli php-gd libapache2-mod-php php-cgi -y
 
 echo "Installing MariaDb -----------------------"
-echo "Please enter root user MySQL password!"
-read rootpasswd
+echo -n "Please enter root user MySQL password!"
+read -s rootpasswd
+echo
 sudo apt-get install mariadb-server php-mysql -y
 sudo service apache2 restart
 sudo mysql_secure_installation
@@ -23,7 +24,7 @@ sudo mysql_secure_installation
 echo "Changing ownership to pi user -----------------------"
 cd /var/www/html
 sudo chown -R pi:www-data /var/www/html/*
-sudo chmod -R 777 /var/www/html/*
+sudo chmod -R 755 /var/www/html/*
 sudo rm index.html
 sudo touch index.php
 echo "Please Add Test Message To index.php -----------------------"
