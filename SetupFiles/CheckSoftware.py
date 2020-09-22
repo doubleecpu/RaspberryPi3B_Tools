@@ -1,11 +1,11 @@
 
 import sys; 
 import os;
-from .Functions import ReadOSRelease
+from Functions import ReadOSRelease
 
-OS = ReadOSRelease 
+OS = ReadOSRelease.OS_Release()
 
-def __main__():
+def Check_SW():
     print("System is running " + sys.platform)
     print("Checking Version of Linux")
     ReadOSRelease.Make_OSRelease()
@@ -39,3 +39,5 @@ def __main__():
     print( "Finished Checking Software")
 
     return 0
+
+Check_SW
