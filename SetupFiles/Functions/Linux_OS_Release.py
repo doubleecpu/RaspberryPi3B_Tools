@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 #Initialized Variables
 
 #Variables
@@ -14,8 +16,11 @@ class OS_Release:
         self.HOME_URL = ""
         self.SUPPORT_URL = ""
         self.BUG_REPORT_URL = ""
+        self.Make_OSRelease()
 # Function Fills in Data
     def Fill_Value(self, Variable_Name, Variable_Value):
+        # debug 
+        # print("Variable: " + Variable_Name + " " + Variable_Value)
         if Variable_Name == "PRETTY_NAME":
             self.PRETTY_NAME = Variable_Value
         elif Variable_Name == "NAME" :
@@ -45,7 +50,6 @@ class OS_Release:
         OSRelease_file = open("/etc/os-release")
         OSRelease_Data = OSRelease_file.read()
         TextLength = len(OSRelease_Data)
-        print("File has " + str(TextLength) + " characters")
         # Initializes Position Markers
         Current_Position = 0
         Variable_Name_Start = 0 
@@ -56,7 +60,6 @@ class OS_Release:
         if OSRelease_Data[Current_Position:1] == "":
             print("Reached End Of File")
         else :
-            print( len(OSRelease_Data))
             for Current_Position in range(len(OSRelease_Data)):
                 if Name_And_Value == True :
                     self.Fill_Value(OSRelease_Data[Variable_Name_Start:Variable_Name_End], OSRelease_Data[Variable_Value_Start:Variable_Value_End] )
@@ -78,23 +81,3 @@ class OS_Release:
         # End IF
         return 0
 
-class Test_OSRelease:
-    def __init__(self, OS_Release):
-        self.OS_Info = OS_Release
-        self.OS_Info.Make_OSRelease()
-
-    def Test_OS(self):
-        print("PRETTY_NAME = " + self.OS_Info.PRETTY_NAME)
-        print("NAME = " + self.OS_Info.NAME)
-        print("VERSION_ID = " + self.OS_Info.VERSION_ID)
-        print("VERSION = " + self.OS_Info.VERSION)
-        print("VERSION_CODENAME = " + self.OS_Info.VERSION_CODENAME)
-        print("ID = " + self.OS_Info.ID)
-        print("ID_LIKE = " + self.OS_Info.ID_LIKE)
-        print("HOME_URL = " + self.OS_Info.HOME_URL)
-        print("SUPPORT_URL = " + self.OS_Info.SUPPORT_URL)
-        print("BUG_REPORT_URL = " + self.OS_Info.BUG_REPORT_URL)
-
-    
-Test1 = Test_OSRelease(OS_Release())
-Test1.Test_OS()

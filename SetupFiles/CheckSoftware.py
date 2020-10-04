@@ -1,43 +1,14 @@
+from Functions import Linux_Check, SW_Check
 
-import sys; 
-import os;
-from Functions import ReadOSRelease
+def get_Available_SW():
+    print("Checking Software Available on System")
+    SW = Linux_Check.CheckOS()
+#    SW.OSRelease.Make_OSRelease()
+    if SW.CurrentOS == "linux" :
+        print("- Linux Version is: " + SW.OSRelease.ID)
+        print("Checking Installed SW") 
+        SW = SW_Check.SW_Installed()
+        SW.Print_Values()
 
-OS = ReadOSRelease.OS_Release()
 
-def Check_SW():
-    print("System is running " + sys.platform)
-    print("Checking Version of Linux")
-    ReadOSRelease.Make_OSRelease()
-    if int(ReadOSRelease.VERSION_ID) > 8 : 
-        print("Linux Version ok")
-    else:
-        print("Linux Version Older than version 8 Currently: " + ReadOSRelease.VERSION )
-
-    print( "Checking Version Python")
-
-    print ("Python3 version is: " + sys.version)
-
-    print( "Checking Version GPIO")
-
-    print( "Checking Version I2C")
-
-    print( "Checking Version SPI")
-
-    print( "Checking Version UART")
-
-    print( "Checking MySQL")
-
-    print( "Checking Apache")
-
-    print( "Checking PHP")
-
-    print( "Checking NodeJS")
-
-    print( "Checking Wordpress")
-
-    print( "Finished Checking Software")
-
-    return 0
-
-Check_SW
+get_Available_SW()

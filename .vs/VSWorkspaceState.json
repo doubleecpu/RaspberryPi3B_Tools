@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Sensors",
+    "\\SetupFiles",
+    "\\SetupFiles\\Functions",
+    "\\tests"
   ],
-  "SelectedNode": "\\setup.py",
+  "SelectedNode": "\\Sensors\\SensorsAppPage.py",
   "PreviewInSolutionExplorer": false
 }
