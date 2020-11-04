@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
+# Data to be displayed on the app
+from SetupFiles.Functions import Linux_OS_Release, Linux_Check, SW_Check
 
-from .SetupFiles.Functions import Linux_OS_Release, Linux_Check, SW_Check
-
-class Test_OSRelease:
-    def __init__(self, OS_Release):
-        self.OS_Info = OS_Release
-        self.OS_Info.Make_OSRelease()
+class Model_OSRelease:
+    def __init__(self, parent):
+        self.MVC_App = parent.MVC_App
+        self.OS_Info = Linux_OS_Release.OS_Release()
 
     def Test_OS(self):
         print("PRETTY_NAME = " + self.OS_Info.PRETTY_NAME)

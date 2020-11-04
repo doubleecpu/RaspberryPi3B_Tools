@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import importlib.util  
 import sys
 import subprocess as cli_prompt 

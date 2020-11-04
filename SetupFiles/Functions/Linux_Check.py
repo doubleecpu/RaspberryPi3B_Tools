@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 from .Linux_OS_Release import OS_Release
 

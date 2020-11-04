@@ -4,8 +4,9 @@
     "\\Sensors",
     "\\SetupFiles",
     "\\SetupFiles\\Functions",
-    "\\tests"
+    "\\tests",
+    "\\Wordpress"
   ],
-  "SelectedNode": "\\Sensors\\SensorsAppPage.py",
+  "SelectedNode": "\\View.py",
   "PreviewInSolutionExplorer": false
 }
