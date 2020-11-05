@@ -4,9 +4,10 @@
     "\\Sensors",
     "\\SetupFiles",
     "\\SetupFiles\\Functions",
+    "\\SetupFiles\\Views",
     "\\tests",
     "\\Wordpress"
   ],
-  "SelectedNode": "\\View.py",
+  "SelectedNode": "\\SetupFiles\\Views\\Linux_View.py",
   "PreviewInSolutionExplorer": false
 }
