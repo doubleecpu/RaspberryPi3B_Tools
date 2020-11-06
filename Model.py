@@ -6,6 +6,8 @@ class Model_OSRelease:
     def __init__(self, parent):
         self.MVC_App = parent.MVC_App
         self.OS_Info = Linux_OS_Release.OS_Release()
+        self.SW_Info = SW_Check.SW_Installed()
+        print("Information Gathered")
 
     def Test_OS(self):
         print("PRETTY_NAME = " + self.OS_Info.PRETTY_NAME)

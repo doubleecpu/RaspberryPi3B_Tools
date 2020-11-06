@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from .SetupFiles.Functions import Linux_OS_Release, Linux_Check, SW_Check
+from ..Sensors.SetupFiles.Functions import Linux_OS_Release, Linux_Check, SW_Check
 
 class Test_OSRelease:
     def __init__(self, OS_Release):
@@ -18,3 +18,6 @@ class Test_OSRelease:
         print("HOME_URL = " + self.OS_Info.HOME_URL)
         print("SUPPORT_URL = " + self.OS_Info.SUPPORT_URL)
         print("BUG_REPORT_URL = " + self.OS_Info.BUG_REPORT_URL)
+
+Test__ = Test_OSRelease
+Test__.Test_OS

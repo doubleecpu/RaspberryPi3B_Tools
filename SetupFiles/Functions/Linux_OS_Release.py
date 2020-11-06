@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
-
-#Initialized Variables
-
 #Variables
 class OS_Release:
     def __init__(self):
+        print("- Gathering OS Information")
         self.PRETTY_NAME = ""
         self.NAME = ""
         self.VERSION_ID = ""

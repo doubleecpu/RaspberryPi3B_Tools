@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from Functions import Linux_Check, SW_Check
 
 def get_Available_SW():

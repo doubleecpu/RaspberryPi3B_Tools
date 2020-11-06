@@ -6,7 +6,7 @@ import subprocess as cli_prompt
 
 class SW_Installed:
     def __init__(self):
-        print("- Checking Software Installed")
+        print("- Gathering Software Modules Installed")
         self.Python3_Version = ""
         self.GPIO_Version = []
         self.I2C_Version = []
@@ -56,7 +56,7 @@ class SW_Installed:
         self.UART_Version.append([self.is_Available('io')])
         
 
-    def is_Available(self, Property_Name):
+    def is_Available(self, Property_Name): 
         try :
             Ver_ = importlib.find_loader(Property_Name)
             if Ver_ is not None:
