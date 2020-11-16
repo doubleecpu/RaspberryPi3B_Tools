@@ -1,12 +1,14 @@
-#!/usr/bin/env python3
+#!/usr/bin/python
+
 # Data to be displayed on the app
 from SetupFiles.Functions import Linux_OS_Release, Linux_Check, SW_Check
 
 class Model_OSRelease:
     def __init__(self, parent):
         self.MVC_App = parent.MVC_App
+        self.App_Sys = parent.App_sys
         self.OS_Info = Linux_OS_Release.OS_Release()
-        self.SW_Info = SW_Check.SW_Installed()
+        self.SW_Info = SW_Check.SW_Installed(self)
         print("Information Gathered")
 
     def Test_OS(self):

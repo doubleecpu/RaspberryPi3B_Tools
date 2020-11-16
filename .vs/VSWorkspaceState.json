@@ -1,12 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Sensors",
     "\\SetupFiles",
     "\\SetupFiles\\Functions",
-    "\\SetupFiles\\Views",
-    "\\tests",
-    "\\Wordpress"
+    "\\SetupFiles\\Views"
   ],
   "SelectedNode": "\\SetupFiles\\Views\\Linux_View.py",
   "PreviewInSolutionExplorer": false

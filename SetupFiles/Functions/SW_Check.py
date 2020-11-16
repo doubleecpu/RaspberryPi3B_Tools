@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 import importlib.util  
-import sys
 import subprocess as cli_prompt 
 
 class SW_Installed:
-    def __init__(self):
+    def __init__(self, parent):
+        self.App_Sys = parent.App_Sys
         print("- Gathering Software Modules Installed")
         self.Python3_Version = ""
         self.GPIO_Version = []
@@ -41,7 +41,7 @@ class SW_Installed:
 
     def check_Python(self):
         try: 
-            self.Python3_Version =  str(sys.version_info.minor)
+            self.Python3_Version =  str(self.App_Sys.version_info.minor)
         except: 
             self.Python3_Version = "Not Founnd using sys."
     
