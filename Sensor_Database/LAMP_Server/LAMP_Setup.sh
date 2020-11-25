@@ -1,4 +1,5 @@
-#!/bin bash
+#!/usr/bin/python3
+
 echo "Starting Update -----------------------"
 sudo apt-get update -y
 echo "Starting Upgrade -----------------------"

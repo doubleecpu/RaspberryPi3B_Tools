@@ -1,5 +1,7 @@
-#!/usr/bin/python
-from subprocess import call
+#!/usr/bin/python3
+#
+
+# from subprocess import call
 
 print("Creating SensorDB")
 bashCall = call("./Create_SensorDB.sh")

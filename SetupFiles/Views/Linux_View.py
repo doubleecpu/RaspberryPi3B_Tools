@@ -39,6 +39,9 @@ class View_1:
         else:
             self.tk.Tk.destroy(self.app_window)
 
+    def Create_LAMP(self):
+        self.MVC_App.Controller.Run_Bash()
+
     def create_default_menubars(self):
         # Creating Menubar 
         self.menubar = self.tk.Menu(self.app_window)
@@ -53,7 +56,7 @@ class View_1:
 
         self.edit = self.tk.Menu(self.menubar, tearoff = 0) 
         self.menubar.add_cascade(label ='Edit', menu = self.edit) 
-        self.edit.add_command(label ='Cut', command = None) 
+        self.edit.add_command(label ='LAMP', command=lambda: self.Create_LAMP()) 
         self.edit.add_command(label ='Copy', command = None) 
         self.edit.add_command(label ='Paste', command = None) 
         self.edit.add_command(label ='Select All', command = None) 

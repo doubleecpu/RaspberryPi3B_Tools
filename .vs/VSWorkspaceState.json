@@ -1,10 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Sensor_Database",
+    "\\Sensor_Database\\Create_DBs",
+    "\\Sensor_Database\\LAMP_Server",
+    "\\Sensor_Factory",
+    "\\Sensor_Factory\\DHT11",
     "\\SetupFiles",
     "\\SetupFiles\\Functions",
     "\\SetupFiles\\Views"
   ],
-  "SelectedNode": "\\SetupFiles\\Views\\Linux_View.py",
+  "SelectedNode": "\\Controller.py",
   "PreviewInSolutionExplorer": false
 }

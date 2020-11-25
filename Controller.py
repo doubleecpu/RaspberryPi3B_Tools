@@ -3,8 +3,10 @@
 # Controls how Data is to be displayed on the app
 
 from Model import Model_OSRelease
+from Sensor_Database.LAMP_Server import LAMP_Database
 from View import Window_Manager
 import sys as App_sys
+import subprocess as Sub_Process
 
 class Control_View:
     def __init__(self, parent):
@@ -21,3 +23,15 @@ class Control_View:
     
     def Control_View_Loop(self):
         self.app.view_loop()
+
+    def Run_Bash(self):
+        self.Bash_Script = Control_Bash
+        self.Bash_Script.Create_LAMP_Server()
+
+class Control_Bash:
+    def __init__(self, parent):
+        self.subprocess = Sub_Process
+        self.LAMP_Database = LAMP_Database.Bash_DB(self)
+
+    def Create_LAMP_Server(self):
+        self.LAMP_Database.Create_DB("LAMP")
