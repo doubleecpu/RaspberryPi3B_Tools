@@ -55,14 +55,13 @@ class View_1:
         self.file.add_command(label ='Exit', command=lambda: self.close_window()) 
 
         self.edit = self.tk.Menu(self.menubar, tearoff = 0) 
-        self.menubar.add_cascade(label ='Edit', menu = self.edit) 
+        self.menubar.add_cascade(label ='DB Stack', menu = self.edit) 
         self.edit.add_command(label ='LAMP', command=lambda: self.Create_LAMP()) 
-        self.edit.add_command(label ='Copy', command = None) 
-        self.edit.add_command(label ='Paste', command = None) 
-        self.edit.add_command(label ='Select All', command = None) 
+        self.edit.add_command(label ='FLASK', command = None) 
+        self.edit.add_command(label ='NODEJS', command = None) 
         self.edit.add_separator() 
-        self.edit.add_command(label ='Find...', command = None) 
-        self.edit.add_command(label ='Find again', command = None) 
+        self.edit.add_command(label ='Table', command = None) 
+        self.edit.add_command(label ='Erase', command = None) 
   
         # Adding Help Menu 
         self.help_ = self.tk.Menu(self.menubar, tearoff = 0) 

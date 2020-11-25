@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/bin/bash
 
 echo "Starting Update -----------------------"
 sudo apt-get update -y

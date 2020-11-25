@@ -25,13 +25,15 @@ class Control_View:
         self.app.view_loop()
 
     def Run_Bash(self):
-        self.Bash_Script = Control_Bash
+        self.Bash_Script = Control_Bash(self)
         self.Bash_Script.Create_LAMP_Server()
 
 class Control_Bash:
-    def __init__(self, parent):
+    def __init__(self, Control_Viewer):
+        self.Controller = Control_Viewer.MVC_App.Controller
         self.subprocess = Sub_Process
-        self.LAMP_Database = LAMP_Database.Bash_DB(self)
+        self.LAMP_DB = LAMP_Database.Bash_DB
 
     def Create_LAMP_Server(self):
-        self.LAMP_Database.Create_DB("LAMP")
+        self.DB_Stack = 'LAMP'
+        self.LAMP_DB.Create_DB(self, self)
