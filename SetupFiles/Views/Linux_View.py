@@ -42,6 +42,9 @@ class View_1:
     def Create_LAMP(self):
         self.MVC_App.Controller.Run_Bash()
 
+    def Create_Wordpress(self):
+        self.MVC_App.Controller.Run_WP_Setup()
+
     def create_default_menubars(self):
         # Creating Menubar 
         self.menubar = self.tk.Menu(self.app_window)
@@ -63,6 +66,13 @@ class View_1:
         self.edit.add_command(label ='Table', command = None) 
         self.edit.add_command(label ='Erase', command = None) 
   
+        # Adding Website Menu
+        self.Webhost = self.tk.Menu(self.menubar, tearoff = 0) 
+        self.menubar.add_cascade(label ='Host', menu = self.Webhost) 
+        self.Webhost.add_command(label ='Wordpress', command=lambda: self.Create_Wordpress())  
+        self.Webhost.add_separator() 
+        self.Webhost.add_command(label ='Home Page', command = None) 
+
         # Adding Help Menu 
         self.help_ = self.tk.Menu(self.menubar, tearoff = 0) 
         self.menubar.add_cascade(label ='Help', menu = self.help_) 

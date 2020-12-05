@@ -5,3 +5,7 @@
 /__pycache__
 /SetupFiles/Views/__pycache__
 *.pyc
+/Sensor_Database/LAMP_Server/.my.cnf.1303
+/Sensor_Database/LAMP_Server/.mysql.1303
+/.my.cnf.31089
+/.mysql.31089

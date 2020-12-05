@@ -2,13 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Sensor_Database",
-    "\\Sensor_Database\\Create_DBs",
     "\\Sensor_Database\\LAMP_Server",
-    "\\Sensor_Factory",
-    "\\Sensor_Factory\\DHT11",
     "\\SetupFiles",
     "\\SetupFiles\\Functions",
-    "\\SetupFiles\\Views"
+    "\\SetupFiles\\Views",
+    "\\Wordpress"
   ],
   "SelectedNode": "\\Controller.py",
   "PreviewInSolutionExplorer": false

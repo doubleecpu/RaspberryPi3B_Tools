@@ -4,6 +4,7 @@
 
 from Model import Model_OSRelease
 from Sensor_Database.LAMP_Server import LAMP_Database
+from Wordpress import Wordpress_Host
 from View import Window_Manager
 import sys as App_sys
 import subprocess as Sub_Process
@@ -27,13 +28,22 @@ class Control_View:
     def Run_Bash(self):
         self.Bash_Script = Control_Bash(self)
         self.Bash_Script.Create_LAMP_Server()
+    
+    def Run_WP_Setup(self):
+        self.WP_Script = Control_Bash(self)
+        self.WP_Script.Create_WP_Host()
 
 class Control_Bash:
     def __init__(self, Control_Viewer):
         self.Controller = Control_Viewer.MVC_App.Controller
         self.subprocess = Sub_Process
         self.LAMP_DB = LAMP_Database.Bash_DB
+        self.WP_Host = Wordpress_Host.WP_Host
 
     def Create_LAMP_Server(self):
         self.DB_Stack = 'LAMP'
         self.LAMP_DB.Create_DB(self, self)
+    
+    def Create_WP_Host(self):
+        self.Host = 'Wordpress'
+        self.WP_Host.Create_Host(self, self)

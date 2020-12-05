@@ -1,4 +1,5 @@
-#!/bin bash
+#!/bin/bash
+
 echo "Starting Wordpress setup -----------------------"
 cd /var/www/html/ 
 sudo rm * 

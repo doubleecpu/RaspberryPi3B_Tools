@@ -12,7 +12,7 @@ sudo apt-get install apache2 -y
 echo "Testing Apache on Raspberry Pi -----------------------"
 wget -O check_apache.html http://127.0.0.1 
 echo "Installing PHP -----------------------"
-sudo apt install php php-mbstring php-cli php-gd libapache2-mod-php php-cgi -y
+sudo apt-get install php php-mbstring php-cli php-gd libapache2-mod-php php-cgi -y
 
 echo "Installing MariaDb -----------------------"
 echo -n "Please enter root user MySQL password!"
