@@ -15,7 +15,11 @@ Sensors are set up and read in python and data is stored to MariaDB (MySQL) and 
 ## Examples:
 
 ## What's New For Version 0.0.1
-
+### 12/05/2020
+* Added Bash Script to setup Wordpress localhost
+* Added Host Menu 
+* Changed Menu to DB Stack (plan to add Flask and Node JS)
+* Fixed to run App.py on Command Line 
 ### 9/18/2020 
 * Setup as Python Package formatting, Set up Test Driven Development Files, Synced To GitHub
 
