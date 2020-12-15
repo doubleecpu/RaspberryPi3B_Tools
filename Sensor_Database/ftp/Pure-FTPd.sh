@@ -1,20 +1,20 @@
-!#bin/bash
-print("Install Pure-FTPd ---------------------------")
+#!bin/bash
+echo "Install Pure-FTPd ---------------------------"
 sudo apt install pure-ftpd
-#print("Creating New User ftpuser in Group ftpgroup-")
+#echo "Creating New User ftpuser in Group ftpgroup -"
 #sudo groupadd ftpgroup
 #sudo useradd ftpuser -g ftpgroup -s /sbin/nologin -d /dev/null
 
 #sudo mkdir /home/pi/FTP
 #sudo chown -R ftpuser:ftpgroup /home/pi/FTP
 
-print("Adding User pi in ww-data group to FTP-------")
+echo "Adding User pi in ww-data group to FTP-------"
 sudo pure-pw useradd upload -u pi -g www-data -d /var/www/html/ -m
-print("Setting up virtual db------------------------")
+echo "Setting up virtual db------------------------"
 sudo pure-pw mkdb
-print("Linking authentication file------------------")
+echo "Linking authentication file------------------"
 sudo ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/5puredb
-print("Restarting ftp service ----------------------")
+echo "Restarting ftp service ----------------------"
 sudo service pure-ftpd restart
 
 cd /etc/pure-ftpd/conf/
@@ -36,5 +36,5 @@ sudo touch ProhibitDotFilesWrite
 echo "yes" > ProhibitDotFilesWrite
 sudo touch FSCharset
 echo "UTF-8" > FSCharset
-print("Restarting FTP Server ----------------------")
+echo "Restarting FTP Server ----------------------"
 sudo service pure-ftpd restart
