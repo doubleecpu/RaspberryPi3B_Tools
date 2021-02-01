@@ -1,4 +1,4 @@
-# A Pyhton Project To automate Sensor Kit use on Raspberry Pi
+# A Pyhton Project To automate Raspberry Pi configurations
 Visit [VG-1 Raspberry Pi Blog](http://vg-1.com)
 
 [![VG-1 Logo](http://vg-1.com/wp-content/uploads/2019/05/G.png)](http://vg-1.com)
@@ -7,8 +7,11 @@ Visit [VG-1 Raspberry Pi Blog](http://vg-1.com)
 Gil Medel doubleecpu@outlook.com
 
 ## Overview:
-The Project setsup Raspberry Pi to read sensor data 
-Sensors are set up and read in python and data is stored to MariaDB (MySQL) and data is Displayed in Wordpress website 
+The Project to maintain set up of Raspberry Pi Packages that I use. 
+Software set up by running shell script in python 
+Automated So far:
+-LAMP Server Setup
+-Wordpress website Host Install 
 
 ## Basic Usage:
 
