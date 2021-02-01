@@ -2,7 +2,7 @@
 
 echo "Starting Wordpress setup -----------------------"
 cd /var/www/html/ 
-sudo rm * 
+sudo rm -R /var/www/html/* 
 sudo wget http://wordpress.org/latest.tar.gz
 sudo tar xzf latest.tar.gz 
 sudo mv wordpress/* .
