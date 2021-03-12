@@ -2,7 +2,6 @@
 
 from SetupFiles.Views import Linux_View as Views
 
-
 class Window_Manager:
     def __init__(self, parent):
         #reference main App

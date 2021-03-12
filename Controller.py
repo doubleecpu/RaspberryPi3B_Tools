@@ -3,8 +3,8 @@
 # Controls how Data is to be displayed on the app
 
 from Model import Model_OSRelease
-from Sensor_Database.LAMP_Server import LAMP_Database
-from Wordpress import Wordpress_Host
+from Setup_Scripts.LAMP_Server import LAMP_Database
+from Setup_Scripts.Wordpress import Wordpress_Host
 from View import Window_Manager
 import sys as App_sys
 import subprocess as Sub_Process
