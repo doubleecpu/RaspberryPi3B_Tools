@@ -1,4 +1,10 @@
 # A Pyhton Project To automate Raspberry Pi configurations
+sudo git clone https://github.com/gilmedel/RaspberryPi3B_Tools.git
+//After cloning Run:
+sudo chown -R pi:pi *
+sudo chmod 755 -R *
+sudo python3 App.py
+
 Visit [VG-1 Raspberry Pi Blog](http://vg-1.com)
 
 [![VG-1 Logo](http://vg-1.com/wp-content/uploads/2019/05/G.png)](http://vg-1.com)
