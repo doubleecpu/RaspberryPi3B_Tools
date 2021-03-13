@@ -9,7 +9,7 @@ class MVC_App:
         self.Setup_Page = None
         self.App_Name = "MVC_APP (RaspberryPi 3 Sensors)"
         print("Starting Sensors MVC App")
-        self.Controller = Controller.Control_View(self)
+        self.Controller = Controller.IControl_View(self)
 
     def application_loop(self):
         self.Controller.Control_View_Loop()

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from SetupFiles.Views import Linux_View as Views
+from Configuration.Views import Linux_View as Views
 
 class Window_Manager:
     def __init__(self, parent):

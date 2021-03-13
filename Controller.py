@@ -9,7 +9,7 @@ from View import Window_Manager
 import sys as App_sys
 import subprocess as Sub_Process
 
-class Control_View:
+class IControl_View:
     def __init__(self, parent):
         self.MVC_App = parent.app
         self.App_sys = App_sys
@@ -26,14 +26,14 @@ class Control_View:
         self.app.view_loop()
 
     def Run_Bash(self):
-        self.Bash_Script = Control_Bash(self)
+        self.Bash_Script = IRun_Bash(self)
         self.Bash_Script.Create_LAMP_Server()
     
     def Run_WP_Setup(self):
-        self.WP_Script = Control_Bash(self)
+        self.WP_Script = IRun_Bash(self)
         self.WP_Script.Create_WP_Host()
 
-class Control_Bash:
+class IRun_Bash:
     def __init__(self, Control_Viewer):
         self.Controller = Control_Viewer.MVC_App.Controller
         self.subprocess = Sub_Process

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # Data to be displayed on the app
-from SetupFiles.Functions import Linux_OS_Release, Linux_Check, SW_Check
+from Configuration.Models import Linux_OS_Release, Linux_Check, SW_Check
 
 class Model_OSRelease:
     def __init__(self, parent):

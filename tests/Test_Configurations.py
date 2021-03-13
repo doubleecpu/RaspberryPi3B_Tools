@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from ..Sensors.SetupFiles.Functions import Linux_OS_Release, Linux_Check, SW_Check
+from ..Configuration.Models import Linux_OS_Release, Linux_Check, SW_Check
 
 class Test_OSRelease:
     def __init__(self, OS_Release):
