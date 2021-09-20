@@ -55,7 +55,6 @@ class SW_Installed:
         self.UART_Version.append([self.is_Available('serial')])
         self.UART_Version.append([self.is_Available('io')])
         
-
     def is_Available(self, Property_Name): 
         try :
             Ver_ = importlib.find_loader(Property_Name)
@@ -66,12 +65,27 @@ class SW_Installed:
             return Property_Name
         except : 
             return Property_Name + " Exception Occurred"
-    
+
+    def is_Installed(self, Software_Name):
+        try :
+            Ver_ = cli_prompt.run([Software_Name, '-version'], capture_output=True)
+            if len(Ver_) > 19 :
+                if str(Ver_.stdout[0:((len(Ver_) + 19))])[((len(Ver_) - len(Software_Name) + 2)): len(Ver_)] == 'command not found' :
+                    Software_Name = SoftwaSoftware_Name + " Not Installed"
+                else :
+                    Software_Name = SoftwaSoftware_Name + " Installed"
+            elif len(Ver) > len(Software_Name):
+               Software_Name = SoftwaSoftware_Name + " Inst."
+           
+            return Software_Name
+        except :
+            return Software_Name + "N/A"
+
     def check_LAMP(self):
-        self.MySQL_Version.append([self.is_Available('MySQLdb')])
+        self.MySQL_Version.append([self.is_Installed('MySQL')])
         self.MySQL_Version.append([self.is_Available('mysql-connector-python')])
         self.MySQL_Version.append([self.is_Available('SQLite')])
-        self.Apache_Version.append([self.is_Available('mod_wsgi')])
+        self.Apache_Version.append([self.is_Installed('apache2')])
         self.check_PHP()
     
     def check_PHP(self):

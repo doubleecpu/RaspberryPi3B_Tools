@@ -1,13 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Sensor_Database",
-    "\\Sensor_Database\\LAMP_Server",
-    "\\SetupFiles",
-    "\\SetupFiles\\Functions",
-    "\\SetupFiles\\Views",
-    "\\Wordpress"
+    "\\Configuration",
+    "\\Configuration\\Models"
   ],
-  "SelectedNode": "\\Controller.py",
+  "SelectedNode": "\\Configuration\\Models\\SW_Check.py",
   "PreviewInSolutionExplorer": false
 }
