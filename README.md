@@ -1,6 +1,8 @@
 # A Pyhton Project To automate Raspberry Pi configurations
-sudo git clone https://github.com/gilmedel/RaspberryPi3B_Tools.git
+sudo git clone https://github.com/gilmedel/RaspberryPi3B_Tools.git 
+
 //After cloning Run:
+
 sudo chown -R pi:pi *
 sudo chmod 755 -R *
 sudo python3 App.py
