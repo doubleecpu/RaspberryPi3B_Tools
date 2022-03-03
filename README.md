@@ -5,9 +5,9 @@ sudo chown -R pi:pi *
 sudo chmod 755 -R *
 sudo python3 App.py
 
-Visit [VG-1 Raspberry Pi Blog](http://vg-1.com)
+Visit [VG-1 Raspberry Pi Blog](http://doubleecpu.com)
 
-[![VG-1 Logo](http://vg-1.com/wp-content/uploads/2019/05/G.png)](http://vg-1.com)
+[![VG-1 Logo](http://doubleecpu.com/wp-content/uploads/2019/05/G.png)](http://doubleecpu.com)
 
 ## Contact
 Gil Medel doubleecpu@outlook.com
